@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.use('/properties', propertiesRouter);
 
 var mongoose = require('mongoose');
-var databaseUrl = 'mongodb://localhost:27017/realestate'; //needs to be updated
+var databaseUrl = 'mongodb://localhost:27017/realestate';
 
 mongoose.connection.on('connected', function () {
     console.log('mongoose is connected');
