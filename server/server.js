@@ -2,13 +2,15 @@ var express = require('express');
 var app = express();
 var path = require('path');
 var port = process.env.PORT || 5000;
-var propertiesRouter = require('./routes/properties.js');
+var listingsRouter = require('./routes/listings.js');
+var rentalsRouter = require('./routes/rentals.js')
 var bodyParser = require('body-parser');
 //needs to be updated
 
 app.use(express.static('server/public'));
 app.use(bodyParser.json());
-app.use('/properties', propertiesRouter);
+app.use('/listings', listingsRouter);
+app.use('/rentals', rentalsRouter)
 
 var mongoose = require('mongoose');
 var databaseUrl = 'mongodb://localhost:27017/realestate';

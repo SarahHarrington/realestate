@@ -6,8 +6,7 @@ myApp.controller('ForSaleController', function ($http) {
     self.getForSale = function() {
         console.log('for sale clicked');
         
-        console.log('for sale clicked');
-        $http.get('/properties').then(function(response){
+        $http.get('/listings').then(function(response){
             console.log('response', response.data);
             
         }).catch(function(error){
