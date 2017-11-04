@@ -1,0 +1,23 @@
+<div>
+    <h2>Properites for Rent</h2>
+    <div class="row">
+        <div class="col-xs-1"></div>
+        <div class="col-xs-2 headers">Rent</div>
+        <div class="col-xs-2 headers">Square Feet</div>
+        <div class="col-xs-2 headers">City</div>
+        <div class="col-xs-2 headers"></div>
+        <div class="col-xs-2 headers"></div>
+    </div>
+    <div class="row" ng-repeat="listing in rc.rentals">
+        <i class="col-xs-1 fa fa-building fa-3x" aria-hidden="true"></i>
+        <p class="col-xs-2">{{listing.rent}}</p>
+        <p class="col-xs-2">{{listing.sqft}}</p>
+        <p class="col-xs-2">{{listing.city}}</p>
+        <div class="col-xs-2">
+            <button class="btn btn-default">Edit Property</button>
+        </div>
+        <div class="col-xs-2">
+            <button class="btn btn-default">Delete Property</button>
+        </div>
+    </div>
+</div>

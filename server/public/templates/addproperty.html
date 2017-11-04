@@ -1,0 +1,40 @@
+<div>
+    <h2>Add a Property</h2>
+    <div>
+        <button ng-click="ap.showRental()">Add a Rental</button>
+        <button ng-click="ap.showForSale()">Add a Property For Sale</button>
+    </div>
+
+    <div ng-show="ap.addR">
+        <form action="">
+            <p>Add a Rental Property:</p>
+            <label for="">Rent:</label> 
+            <input ng-model="" type="text">
+
+            <label for="">Square Feet:</label>
+            <input type="text">
+
+            <label for="">City:</label>
+            <input type="text">
+
+            <button ng-click="ap.addForRent()">Submit Rental Property</button>
+        </form>
+    </div>
+
+        <div ng-show="ap.addP">
+            <p>Add a Property for Sale</p>
+            <form action="">
+                <label for="">Cost:</label>
+                <input type="text">
+        
+                <label for="">Square Feet:</label>
+                <input type="text">
+        
+                <label for="">City:</label>
+                <input type="text">
+        
+                <button ng-click="ap.addForSale()">Submit Property For Sale</button>
+            </form>
+        </div>
+
+</div>

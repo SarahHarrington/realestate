@@ -4,13 +4,14 @@ myApp.controller('RentalController', function($http){
     var self = this;
 
     self.getForRent = function () {
-        console.log('for rent clicked');
 
         $http.get('/rentals').then(function (response) {
             console.log('response', response.data);
+            self.rentals = response.data;
 
         }).catch(function (error) {
             console.log('For Rent Properities could not load');
         })
     }
+    self.getForRent();
 })

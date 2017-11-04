@@ -7,5 +7,8 @@ myApp.config(function ($routeProvider){
     }).when('/rentals', {
         templateUrl: 'templates/rentals.html',
         controller: 'RentalController as rc'
-    });
+    }).when('/addproperty', {
+        templateUrl: 'templates/addproperty.html',
+        controller: 'AddPropertyController as ap'
+    })
 })
