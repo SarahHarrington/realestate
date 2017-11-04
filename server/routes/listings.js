@@ -15,7 +15,8 @@ router.get('/', function(req, res){
             console.log('Error getting properties for sale');
             
         } else {
-            res.send(foundForSale)
+            console.log('foundforsale', foundForSale);
+            res.send(foundForSale);
         }
     })
 });

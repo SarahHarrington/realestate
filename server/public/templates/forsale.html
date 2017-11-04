@@ -1,6 +1,10 @@
 <div>
-    <div>
-
+    <h2>Properites for Sale</h2>
+    <button ng-click"fs.getForSale()">For sale</button>
+    <div ng-repeat="listing in fs.listings">
+        <span><i class="fa fa-home fa-4x" aria-hidden="true"></i></span>
+        <p>{{listing.city}}</p>
+        <p>{{listing.sqft}}</p>
+        <p>{{listing.city}}</p>
     </div>
-
-</div>
+</div>    
