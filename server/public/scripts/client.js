@@ -1,6 +1,6 @@
-var myApp = angular.module('myApp', []);
+var myApp = angular.module('myApp', ['ngRoute']);
 
-myApp.config(function($routeProvider){
+myApp.config(function ($routeProvider){
     $routeProvider.when('/rentals', {
         templateUrl: 'templates/rentals.html',
         controller: 'RentalController as rc'

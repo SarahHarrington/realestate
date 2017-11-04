@@ -1,13 +1,14 @@
 var express = require('express');
 var app = express();
-var bodyParser = require('body-parser');
-var propertyRouter = require('./routes/propertyrouter.js');
+var path = require('path');
 var port = process.env.PORT || 5000;
+var propertiesRouter = require('./routes/properties.js');
+var bodyParser = require('body-parser');
 //needs to be updated
 
-app.use(bodyParser.json());
 app.use(express.static('server/public'));
-app.use('/propertyrouter', propertyRouter);//needs to be updated
+app.use(bodyParser.json());
+app.use('/properties', propertiesRouter);
 
 var mongoose = require('mongoose');
 var databaseUrl = 'mongodb://localhost:27017/realestate'; //needs to be updated

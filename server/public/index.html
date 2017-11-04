@@ -4,14 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <script src="vendors/angular.js"></script>
+    <script src="vendors/angular-route.js"></script>
+    <script src="scripts/client.js"></script>
+    <script src="scripts/controllers/forsale.controller.js"></script>
+    <script src="scripts/controllers/rentals.controller.js"></script>
+    <link rel="stylesheet" href="vendors/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="templates/forsale.html">
+    <link rel="stylesheet" href="templates/rentals.html">
+    <title>Real Estate Listings</title>
+
 </head>
 <body ng-app="myApp">
     <h1>Live Here</h1>
-    <a href="/#!/rentals"></a>
-    <a href="/#!/forsale"
+        <a href="/#!/rentals">For Rent</a>
+        <a href="/#!/forsale">For Sale</a>
     <main ng-view>
-
+        <!-- Templates will display here -->
     </main>
 </body>
 </html>
