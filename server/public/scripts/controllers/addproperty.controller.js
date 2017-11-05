@@ -3,6 +3,7 @@ myApp.controller('AddPropertyController', function (RealEstateService) {
 
     var self = this;
     self.rentals = RealEstateService.rentals;
+    self.listings = RealEstateService.listings;
 
     //shows rental add form
     self.showRental = function() {
@@ -17,9 +18,9 @@ myApp.controller('AddPropertyController', function (RealEstateService) {
     self.addForRent = function(rentalToAdd) {
         RealEstateService.addForRent(rentalToAdd);
     }
-
+    
     self.addForSale = function (listingToAdd) {
-        RealEstateService.addForRent(listingToAdd);
+        RealEstateService.addForSale(listingToAdd);
     }
 
 })

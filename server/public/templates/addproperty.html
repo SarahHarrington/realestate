@@ -1,40 +1,54 @@
 <div>
     <h2>Add a Property</h2>
     <div>
-        <button ng-click="ap.showRental()">Add a Rental</button>
-        <button ng-click="ap.showForSale()">Add a Property For Sale</button>
+        <button class="btn btn-default" ng-click="ap.showRental()">Add a Rental</button>
+        <button class="btn btn-default" ng-click="ap.showForSale()">Add a Property For Sale</button>
     </div>
 
     <div ng-show="ap.rentals.addR">
-        <form action="" class="propertyAdd">
-            <p>Add a Rental Property:</p>
-            <label for="">Rent:</label> 
-            <input ng-model="ap.rentalToAdd.rent" type="text">
-
-            <label for="">Square Feet:</label>
-            <input ng-model="ap.rentalToAdd.sqft"type="text">
-
-            <label for="">City:</label>
-            <input ng-model="ap.rentalToAdd.city"type="text">
-
-            <button type="button" ng-click="ap.addForRent(ap.rentalToAdd)">Submit Rental Property</button>
+        <p>Add a Rental Property:</p>
+        <div class="propertyAdd">
+        <form action="" class="propertyAdd row">
+            <div class="col-xs-3 prop">
+                <label for="">Rent:</label> 
+                <input ng-model="ap.rentalToAdd.rent" type="text">
+            </div>
+            <div class="col-xs-3 prop">
+                <label for="">Square Feet:</label>
+                <input ng-model="ap.rentalToAdd.sqft"type="text">
+            </div>
+            <div class="col-xs-3 prop">
+                <label for="">City:</label>
+                <input ng-model="ap.rentalToAdd.city"type="text">
+            </div>
+            <div class="col-xs-2 prop">
+                <button class="btn btn-default" type="button" ng-click="ap.addForRent(ap.rentalToAdd)">Submit Rental Property</button>
+            </div>
         </form>
+        </div>
     </div>
 
         <div ng-hide="ap.listings.addR">
             <p>Add a Property for Sale</p>
-            <form action="" class="propertyAdd">
-                <label for="">Cost:</label>
-                <input ng-model="ap.listingToAdd.cost" type="text">
-        
-                <label for="">Square Feet:</label>
-                <input ng-model="ap.listingToAdd.sqft" type="text">
-        
-                <label for="">City:</label>
-                <input ng-model="ap.listingToAdd.city" type="text">
-        
-                <button type="button" ng-click="ap.addForSale(ap.listingToAdd)">Submit Property For Sale</button>
+            <div class="propertyAdd">
+            <form action="" class="row">
+                <div class="col-xs-3 prop">
+                    <label for="">Cost:</label>
+                    <input ng-model="ap.listingToAdd.cost" type="text">
+                </div>
+                <div class="col-xs-3 prop">
+                    <label for="">Square Feet:</label>
+                    <input ng-model="ap.listingToAdd.sqft" type="text">
+                </div>
+                <div class="col-xs-3 prop">
+                    <label for="">City:</label>
+                    <input ng-model="ap.listingToAdd.city" type="text">
+                </div>
+                <div class="col-xs-2 prop">
+                    <button class="btn btn-default" type="button" ng-click="ap.addForSale(ap.listingToAdd)">Submit Property For Sale</button>
+                </div>
             </form>
+            </div>
         </div>
 
 </div>
