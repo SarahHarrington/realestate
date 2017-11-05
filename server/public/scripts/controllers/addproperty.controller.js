@@ -1,20 +1,17 @@
-myApp.controller('AddPropertyController', function ($http) {
+myApp.controller('AddPropertyController', function (RealEstateService) {
     console.log('Add Controller Started');
 
     var self = this;
+    self.rentals = RealEstateService.rentals;
 
     //shows rental add form
     this.showRental = function() {
-        console.log('add rental clicked');
-        this.addR = true;
-        this.addP = false;
+        RealEstateService.showRental();
     }
 
     //shows for sale add form
     this.showForSale = function() {
-        console.log('add for sale clicked');
-        this.addP = true;
-        this.addR = false;   
+        RealEstateService.showForSale();
     }
 
     this.addForRent = function(rentalToAdd) {

@@ -3,8 +3,8 @@ myApp.service('RealEstateService', function($http){
     
     var self = this;
 
-    self.rentals = {data: []};
-    self.listings = {data: []};
+    self.rentals = {data: [], addR: false};
+    self.listings = {data: [], addP: true};
 
     self.getForRent = function () {
         $http.get('/rentals').then(function (response) {
@@ -36,4 +36,31 @@ myApp.service('RealEstateService', function($http){
     }
     self.getForSale();
 
+    self.deleteListing = function (saleId) {
+        console.log('delete clicked');
+        console.log('id', saleId);
+        $http.delete('/listings/' + saleId).then(function (response) {
+            console.log('response', response);
+            self.getForSale();
+        }).catch(function (error) {
+            console.log('error');
+        })
+    }
+
+    self.showRental = function () {
+        console.log('add rental clicked');
+        console.log(self.rentals.addR);
+        
+        self.rentals.addR = true;
+        self.rentals.addP = false;
+
+        console.log(self.rentals.addR);
+    }
+
+    //shows for sale add form
+    self.showForSale = function () {
+        console.log('add for sale clicked');
+        self.addP = true;
+        self.addR = false;
+    }
 })

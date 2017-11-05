@@ -1,7 +1,8 @@
-myApp.controller('ForSaleController', function ($http) {
+myApp.controller('ForSaleController', function (RealEstateService) {
     console.log('For Sale Controller Started');
 
     var self = this;
+    self.listings = RealEstateService.listings;
     
     //gets rental properties
     self.getForSale = function() {
@@ -9,15 +10,7 @@ myApp.controller('ForSaleController', function ($http) {
     }
 
     self.deleteProp = function (saleId) {
-        console.log('delete clicked');
-        console.log('id', saleId);
-        $http.delete('/listings/' + saleId).then(function (response) {
-            console.log('response', response);
-            self.getForSale();
-        }).catch(function (error) {
-            console.log('error');
-        })
-
+        RealEstateService.deleteListing(saleId)
     }
 
     self.editProp = function(saleId) {
