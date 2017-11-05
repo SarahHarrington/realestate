@@ -15,7 +15,7 @@
         <p class="col-xs-2">{{listing.sqft}}</p>
         <p class="col-xs-2">{{listing.city}}</p>
         <div class="col-xs-2">
-            <button class="btn btn-default">Edit Property</button>
+            <button ng-click="fs.editProp(listing._id)" class="btn btn-default">Edit Property</button>
         </div>
         <div class="col-xs-2">
             <button ng-click="fs.deleteProp(listing._id)" class="btn btn-default">Delete Property</button>

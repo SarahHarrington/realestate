@@ -5,14 +5,8 @@ myApp.controller('ForSaleController', function ($http) {
     
     //gets rental properties
     self.getForSale = function() {
-        $http.get('/listings').then(function(response){
-            self.listings = response.data;
-        }).catch(function(error){
-            console.log('For Sale Properities could not load');
-        })
+        RealEstateService.getForSale();
     }
-
-    self.getForSale();  //loads for sale props on section load
 
     self.deleteProp = function (saleId) {
         console.log('delete clicked');
@@ -24,5 +18,18 @@ myApp.controller('ForSaleController', function ($http) {
             console.log('error');
         })
 
+    }
+
+    self.editProp = function(saleId) {
+        console.log('edit clicked');
+        swal({
+            content: {
+                element: "input",
+                attributes: {
+                    placeholder: 'property cost',
+                    type: 'text'
+                },
+            },
+        });
     }
 })
