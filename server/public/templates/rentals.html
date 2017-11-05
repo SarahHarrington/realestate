@@ -8,7 +8,7 @@
         <div class="col-xs-2 headers"></div>
         <div class="col-xs-2 headers"></div>
     </div>
-    <div class="row" ng-repeat="listing in rc.rentals">
+    <div class="row listing" ng-repeat="listing in rc.rentals track by $index">
         <i class="col-xs-1 fa fa-building fa-3x" aria-hidden="true"></i>
         <p class="col-xs-2">{{listing.rent}}</p>
         <p class="col-xs-2">{{listing.sqft}}</p>
@@ -17,7 +17,7 @@
             <button class="btn btn-default">Edit Property</button>
         </div>
         <div class="col-xs-2">
-            <button class="btn btn-default">Delete Property</button>
+            <button ng-click="rc.deleteProp(listing._id)" class="btn btn-default">Delete Property</button>
         </div>
     </div>
 </div>
