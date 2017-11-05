@@ -1,3 +1,8 @@
 .headers {
     font-size: 20px;
 }
+
+.page-header {
+    background-color: #3F3F37;
+    color: #4DB6AC;
+}
