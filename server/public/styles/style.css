@@ -1,21 +1,89 @@
 body {
-    background-color: #B2B09B;
+    background-color: #EAE9E3;
+    font-family: 'Catamaran', sans-serif;
 }
 
-.page-header {
-    background-color: #D6D6B1;
-    color: #3F3F37;
-    margin: 0;
-    padding: 0;
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
 
+.header {
+    background-color: #264653;
+    color: #ECECDB;
+    width: 100%;
+    font-size: 48px;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    z-index: 10;
+    box-shadow: 0 10px 6px -6px #777;
+    text-shadow: 2px 2px 4px #0E1A1F;
+}
+
+.spaceDiv {
+    padding-top: 100px;
+    margin-left: 15px;
+    margin-right: 10px;
 }
 
 .headers {
-    font-size: 20px;
+    font-size: 12px;
+}
+
+.headerRow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .listing {
-    background-color: #D6D6B1;
+    background-color: #B9B9B6;
+    margin: 10px;
+    height: 70px;
+    display: flex;
+    align-content: center;
+    border-radius: 7px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 6px -6px #777;
+}
+
+.icon {
+    color: #39857E;
+}
+
+.navLinkRow {
+    display: flex;
+    align-items: center;
+}
+
+.navLink {
+    height: 50px;
+    width: 200px;
+    background-color: #B9B9B6;
+    display: flex;
+    align-content: center;
+    border-radius: 7px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 6px -6px #777;
     margin: 10px;
 }
+
+.navLink:hover {
+    background-color: #878785;
+}
+
+.delete {
+    background-color: #39857E;
+    color: #EAE9E3;
+    border: none;
+}
+
+.delete:hover {
+    background-color: #204945;
+    color: #F5F5F2;
+}
+
 

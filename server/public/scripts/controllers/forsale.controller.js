@@ -13,16 +13,7 @@ myApp.controller('ForSaleController', function (RealEstateService) {
         RealEstateService.deleteListing(saleId)
     }
 
-    self.editProp = function(saleId) {
-        console.log('edit clicked');
-        swal({
-            content: {
-                element: "input",
-                attributes: {
-                    placeholder: 'property cost',
-                    type: 'text'
-                },
-            },
-        });
-    }
+    // self.editListing = function(saleId) {
+    //     RealEstateService.editListing(saleId);
+    // }
 })

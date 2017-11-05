@@ -13,6 +13,7 @@
     <script src="scripts/controllers/addproperty.controller.js"></script>
     <link rel="stylesheet" href="vendors/font-awesome-4.7.0 2/css/font-awesome.css">
     <link rel="stylesheet" href="vendors/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Dosis|Oxygen|Poppins|Catamaran" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="templates/forsale.html">
     <link rel="stylesheet" href="templates/rentals.html">
@@ -22,17 +23,20 @@
 
 </head>
 <body ng-app="myApp" class="container-fluid">
-    <div class="page-header">
-        <h1>Prime Real Estate</h1><small>Listings for Your Future</small>
-    </div>
-    <div>
-        <a href="/#!/">Home</a>
-        <a href="/#!/addproperty">Add a Property</a>
-        <a href="/#!/rentals">For Rent</a>
-        <a href="/#!/forsale">For Sale</a>
-    </div>
-    <main ng-view>
-        <!-- Templates will display here -->
-    </main>
+    
+    <div class="header"><!-- header -->
+        <p>Prime Properties</p>
+    </div><!-- end header -->
+        <div class="spaceDiv">
+            <div class="row navLinkRow">
+                <a class="navLink col-xs-3" href="/#!/">Home</a>
+                <a class="navLink col-xs-3" href="/#!/addproperty">Add a Property</a>
+                <a class="navLink col-xs-3" href="/#!/rentals">For Rent</a>
+                <a class="navLink col-xs-3" href="/#!/forsale">For Sale</a>
+            </div>
+        </div>
+        <main ng-view>
+            <!-- Templates will display here -->
+        </main>
 </body>
 </html>

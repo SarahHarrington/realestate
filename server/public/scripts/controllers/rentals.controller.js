@@ -8,6 +8,7 @@ myApp.controller('RentalController', function (RealEstateService){
     self.getForRent = function () {
         RealEstateService.getForRent();
     }
+    //deletes properties for rent
     self.deleteProp = function(listingId) {
         RealEstateService.deleteRental(listingId);
     }

@@ -5,36 +5,21 @@ myApp.controller('AddPropertyController', function (RealEstateService) {
     self.rentals = RealEstateService.rentals;
 
     //shows rental add form
-    this.showRental = function() {
+    self.showRental = function() {
         RealEstateService.showRental();
     }
 
     //shows for sale add form
-    this.showForSale = function() {
+    self.showForSale = function() {
         RealEstateService.showForSale();
     }
 
-    this.addForRent = function(rentalToAdd) {
-        console.log('submit for rent');
-        console.log('addForRent', rentalToAdd);
-        
-        $http.post('/rentals', rentalToAdd).then(function(response){
-            console.log('Success');
-            //refresh list here
-        }).catch(function(error){
-            console.log('Error');
-        })
+    self.addForRent = function(rentalToAdd) {
+        RealEstateService.addForRent(rentalToAdd);
     }
 
-    this.addForSale = function (listingToAdd) {
-        console.log('submit for sale');
-        $http.post('/listings', listingToAdd).then(function(response){
-            console.log('Success');
-            //refresh here
-        }).catch(function(error){
-            console.log('Error');
-            
-        })
+    self.addForSale = function (listingToAdd) {
+        RealEstateService.addForRent(listingToAdd);
     }
 
 })

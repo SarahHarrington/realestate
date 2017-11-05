@@ -1,24 +1,24 @@
 <div>
     <h2>Properites for Sale</h2>
     <!-- <button ng-click="fs.getForSale()">For sale</button> -->
-    <div class="row">
+    <div class="headerRow row">
         <div class="col-xs-1"></div>
         <div class="col-xs-2 headers">Cost</div>
         <div class="col-xs-2 headers">Square Feet</div>
         <div class="col-xs-2 headers">City</div>
-        <div class="col-xs-2 headers"></div>
+        <!-- <div class="col-xs-2 headers"></div> -->
         <div class="col-xs-2 headers"></div>
     </div>
     <div class="row listing" ng-repeat="listing in fs.listings.data track by $index">
-        <i class="fa fa-home fa-3x col-xs-1" aria-hidden="true"></i>
+        <i class="icon fa fa-home fa-3x col-xs-1" aria-hidden="true"></i>
         <p class="col-xs-2">{{listing.cost}}</p>
         <p class="col-xs-2">{{listing.sqft}}</p>
         <p class="col-xs-2">{{listing.city}}</p>
+        <!-- <div class="col-xs-2">
+            <button ng-click="fs.editListing(listing._id)" class="btn btn-default">Edit Property</button>
+        </div> -->
         <div class="col-xs-2">
-            <button ng-click="fs.editProp(listing._id)" class="btn btn-default">Edit Property</button>
-        </div>
-        <div class="col-xs-2">
-            <button ng-click="fs.deleteProp(listing._id)" class="btn btn-default">Delete Property</button>
+            <button ng-click="fs.deleteProp(listing._id)" class="btn btn-default delete">Delete Property</button>
         </div>
     </div>
 </div>    
