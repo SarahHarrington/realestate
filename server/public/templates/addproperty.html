@@ -9,15 +9,15 @@
         <form action="">
             <p>Add a Rental Property:</p>
             <label for="">Rent:</label> 
-            <input ng-model="" type="text">
+            <input ng-model="ap.rentalToAdd.rent" type="text">
 
             <label for="">Square Feet:</label>
-            <input type="text">
+            <input ng-model="ap.rentalToAdd.sqft"type="text">
 
             <label for="">City:</label>
-            <input type="text">
+            <input ng-model="ap.rentalToAdd.city"type="text">
 
-            <button ng-click="ap.addForRent()">Submit Rental Property</button>
+            <button ng-click="ap.addForRent(ap.rentalToAdd)">Submit Rental Property</button>
         </form>
     </div>
 
@@ -25,15 +25,15 @@
             <p>Add a Property for Sale</p>
             <form action="">
                 <label for="">Cost:</label>
-                <input type="text">
+                <input ng-model="ap.listingToAdd.cost" type="text">
         
                 <label for="">Square Feet:</label>
-                <input type="text">
+                <input ng-model="ap.listingToAdd.sqft" type="text">
         
                 <label for="">City:</label>
-                <input type="text">
+                <input ng-model="ap.listingToAdd.city" type="text">
         
-                <button ng-click="ap.addForSale()">Submit Property For Sale</button>
+                <button ng-click="ap.addForSale(ap.listingToAdd)">Submit Property For Sale</button>
             </form>
         </div>
 

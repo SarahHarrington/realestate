@@ -19,4 +19,19 @@ router.get('/', function (req, res) {
     })
 });
 
+router.post('/', function(req, res){
+    console.log('post req body', req.body);
+    var rentalToAdd = new Rental(req.body);
+    rentalToAdd.save(function(err, data){
+        if (err) {
+            console.log('Save Error');
+            res.sendStatus(500);
+        }
+        else {
+            res.sendStatus(201);
+        }
+    });
+    
+});
+
 module.exports = router;

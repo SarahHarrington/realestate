@@ -17,14 +17,27 @@ myApp.controller('AddPropertyController', function ($http) {
         this.addR = false;   
     }
 
-    this.addForRent = function() {
+    this.addForRent = function(rentalToAdd) {
         console.log('submit for rent');
+        console.log('addForRent', rentalToAdd);
         
+        $http.post('/rentals', rentalToAdd).then(function(response){
+            console.log('Success');
+            //refresh list here
+        }).catch(function(error){
+            console.log('Error');
+        })
     }
 
-    this.addForSale = function() {
+    this.addForSale = function (listingToAdd) {
         console.log('submit for sale');
-        
+        $http.post('/listings', listingToAdd).then(function(response){
+            console.log('Success');
+            //refresh here
+        }).catch(function(error){
+            console.log('Error');
+            
+        })
     }
 
 })
