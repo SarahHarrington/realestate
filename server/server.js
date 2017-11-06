@@ -13,7 +13,13 @@ app.use('/listings', listingsRouter);
 app.use('/rentals', rentalsRouter)
 
 var mongoose = require('mongoose');
-var databaseUrl = 'mongodb://localhost:27017/realestate';
+// var databaseUrl = 'mongodb://localhost:27017/realestate';
+var dbPath = process.env.MONGODB_URI;
+if (process.env.MONGODB_URI != undefined) {
+    dbPath = process.env.MONGODB_URI;
+} else {
+    dbPath = 'mongodb://localhost:27017/realestate'
+}
 
 mongoose.connection.on('connected', function () {
     console.log('mongoose is connected');
