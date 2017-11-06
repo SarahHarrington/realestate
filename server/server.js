@@ -13,7 +13,7 @@ app.use('/listings', listingsRouter);
 app.use('/rentals', rentalsRouter)
 
 var mongoose = require('mongoose');
-var databaseUrl = 'mongodb://localhost:27017/realestate';
+// var databaseUrl = 'mongodb://localhost:27017/realestate';
 var mongoURI = '';
 if (process.env.MONGODB_URI != undefined) {
     mongoURI = process.env.MONGODB_URI;
@@ -29,7 +29,7 @@ mongoose.connection.on('error', function(){
     console.log('mongoose connection failed');
 })
 
-mongoose.connect(databaseUrl,{
+mongoose.connect(mongoURI,{
     useMongoClient: true
 });
 
