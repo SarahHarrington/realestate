@@ -9,26 +9,33 @@ body {
 }
 
 .header {
-    background-color: #264653;
-    color: #EAE9E3;
+    background-image: url("https://i.imgur.com/sksYxvV.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #0E1A1F;
     width: 100%;
+    height: 200px;
     font-size: 48px;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     position: fixed;
     z-index: 10;
     box-shadow: 0 10px 6px -6px #777;
-    text-shadow: 2px 2px 4px #0E1A1F;
+    text-shadow: 2px 2px 4px #B9B9B6;
 }
 
 .spaceDiv {
-    padding-top: 100px;
+    padding-top: 220px;
     margin-left: 15px;
     margin-right: 10px;
+    display: flex;
+    justify-content: center;
 }
 
 .headers {
-    font-size: 12px;
+    font-size: 16px;
+    color: #BC3836;
 }
 
 .headerRow {
@@ -50,7 +57,7 @@ body {
 }
 
 .icon {
-    color: #39857E;
+    color: #BC3836;
 }
 
 .navLinkRow {
@@ -71,6 +78,7 @@ body {
     margin: 10px;
     color: #0E1A1F;
     text-decoration: none;
+    font-size: 18px;
 }
 
 .navLink:hover {
@@ -79,14 +87,18 @@ body {
     text-decoration: none;
 }
 
-.delete {
-    background-color: #39857E;
+.buttons {
+    margin-bottom: 20px;
+}
+
+.delete, .addProp, .submit {
+    background-color: #BC3836;
     color: #EAE9E3;
     border: none;
 }
 
-.delete:hover {
-    background-color: #204945;
+.delete:hover, .addProp:hover, .submit:hover {
+    background-color: #9A2E2D;
     color: #F5F5F2;
 }
 
@@ -96,14 +108,16 @@ body {
     margin: 10px;
     display: flex;
     align-items: center;
-    padding-left: 5px;
-    padding-right: 5px;
-    justify-content: center;
 }
 
 .prop {
     justify-content: center;
     align-items: center;
     display: flex;
+}
+
+.propBody {
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
