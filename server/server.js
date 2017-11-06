@@ -14,11 +14,11 @@ app.use('/rentals', rentalsRouter)
 
 var mongoose = require('mongoose');
 // var databaseUrl = 'mongodb://localhost:27017/realestate';
-var dbPath = process.env.MONGODB_URI;
+var mongoURI = '';
 if (process.env.MONGODB_URI != undefined) {
-    dbPath = process.env.MONGODB_URI;
+    mongoURI = process.env.MONGODB_URI;
 } else {
-    dbPath = 'mongodb://localhost:27017/realestate'
+    mongoURI = 'mongodb://localhost:27017/sarahsdb';
 }
 
 mongoose.connection.on('connected', function () {
