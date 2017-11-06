@@ -10,7 +10,7 @@ myApp.controller('ForSaleController', function (RealEstateService) {
     }
 
     self.deleteProp = function (saleId) {
-        RealEstateService.deleteListing(saleId)
+        RealEstateService.deleteListing(saleId);
     }
 
     // self.editListing = function(saleId) {

@@ -20,7 +20,7 @@ myApp.service('RealEstateService', function($http){
     self.deleteRental = function (listingId) {
         swal("Are you sure you want to delete this rental?")
             .then((value) => {
-                if (true) {
+                if (value === true) {
                     $http.delete('/rentals/' + listingId).then(function (response) {
                         self.getForRent();
                     }).catch(function (error) {
@@ -44,7 +44,7 @@ myApp.service('RealEstateService', function($http){
     self.deleteListing = function (saleId) {
         swal("Are you sure you want to delete this listing?")
             .then((value) => {
-                if(true) {
+                if(value === true) {
                     $http.delete('/listings/' + saleId).then(function (response) {
                         self.getForSale();
                     }).catch(function (error) {
