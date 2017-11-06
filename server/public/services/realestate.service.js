@@ -5,6 +5,7 @@ myApp.service('RealEstateService', function($http){
 
     self.rentals = {data: [], addR: false};
     self.listings = {data: [], addP: false};
+    self.rentalToAdd = {rent: '', sqft: '', city: ''};
 
     //gets rental properties on section load
     self.getForRent = function () {
