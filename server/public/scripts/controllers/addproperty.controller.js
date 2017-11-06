@@ -21,6 +21,9 @@ myApp.controller('AddPropertyController', function (RealEstateService) {
     
     self.addForSale = function (listingToAdd) {
         RealEstateService.addForSale(listingToAdd);
+    }
 
+    self.clearRental = function() {
+        
     }
 })
