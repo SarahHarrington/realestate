@@ -17,10 +17,12 @@ myApp.controller('AddPropertyController', function (RealEstateService) {
 
     self.addForRent = function(rentalToAdd) {
         RealEstateService.addForRent(rentalToAdd);
+        self.rentalToAdd = {};
     }
     
     self.addForSale = function (listingToAdd) {
         RealEstateService.addForSale(listingToAdd);
+        self.listingToAdd = {};
     }
 
     self.clearRental = function() {
