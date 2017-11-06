@@ -18,7 +18,7 @@ var mongoURI = '';
 if (process.env.MONGODB_URI != undefined) {
     mongoURI = process.env.MONGODB_URI;
 } else {
-    mongoURI = 'mongodb://localhost:27017/sarahsdb';
+    mongoURI = 'mongodb://localhost:27017/sarahsdb';d
 }
 
 mongoose.connection.on('connected', function () {
