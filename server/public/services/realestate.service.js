@@ -4,7 +4,7 @@ myApp.service('RealEstateService', function($http){
     var self = this;
 
     self.rentals = {data: [], addR: false};
-    self.listings = {data: [], addP: true};
+    self.listings = {data: [], addP: false};
 
     //gets rental properties on section load
     self.getForRent = function () {
@@ -18,11 +18,16 @@ myApp.service('RealEstateService', function($http){
 
     //deletes rental on button click
     self.deleteRental = function (listingId) {
-        $http.delete('/rentals/' + listingId).then(function (response) {
-            self.getForRent();
-        }).catch(function (error) {
-            console.log('error');
-        })
+        swal("Are you sure you want to delete this rental?")
+            .then((value) => {
+                if (true) {
+                    $http.delete('/rentals/' + listingId).then(function (response) {
+                        self.getForRent();
+                    }).catch(function (error) {
+                        console.log('error');
+                    })
+                };
+            })
     }
 
     //gets properties for sale on section load
@@ -37,22 +42,28 @@ myApp.service('RealEstateService', function($http){
 
     //deletes for sale listing
     self.deleteListing = function (saleId) {
-        $http.delete('/listings/' + saleId).then(function (response) {
-            self.getForSale();
-        }).catch(function (error) {
-            console.log('error');
-        })
+        swal("Are you sure you want to delete this listing?")
+            .then((value) => {
+                if(true) {
+                    $http.delete('/listings/' + saleId).then(function (response) {
+                        self.getForSale();
+                    }).catch(function (error) {
+                        console.log('error');
+                    } 
+                )}
+            })
+
     }
 
     //shows rental add form
     self.showRental = function () {
         self.rentals.addR = true;
-        self.rentals.addP = false;
+        self.listings.addP = false; 
     }
 
     //shows for sale add form
     self.showForSale = function () {
-        self.rentals.addP = true;
+        self.listings.addP = true;
         self.rentals.addR = false;
     }
 
@@ -61,6 +72,9 @@ myApp.service('RealEstateService', function($http){
         console.log('clicked add rental');
         $http.post('/rentals', rentalToAdd).then(function (response) {
             console.log('Success');
+            self.getForRent();
+            swal('Added', 'New Rental Added!', 'success');
+            self.rentals.addR = false;
         }).catch(function (error) {
             console.log('Error');
         })
@@ -71,6 +85,9 @@ myApp.service('RealEstateService', function($http){
         console.log('clicked add listing');
         $http.post('/listings', listingToAdd).then(function (response) {
             console.log('Success');
+            self.getForSale();
+            swal('Added', 'New Listing Added!', 'success');
+            self.listings.addP = false;
         }).catch(function (error) {
             console.log('Error');
         })

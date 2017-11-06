@@ -10,7 +10,7 @@
     </div>
     <div class="row listing" ng-repeat="listing in rc.rentals.data track by $index">
         <i class="icon col-xs-1 fa fa-building fa-3x" aria-hidden="true"></i>
-        <p class="col-xs-2">{{listing.rent}}</p>
+        <p class="col-xs-2">{{listing.rent | currency}}</p>
         <p class="col-xs-2">{{listing.sqft}}</p>
         <p class="col-xs-2">{{listing.city}}</p>
         <!-- <div class="col-xs-2">
