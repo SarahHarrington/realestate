@@ -2,6 +2,8 @@
 
 This application lists rental and properties to buy with options to add and delete properties.
 
+[Live Demo](https://young-cove-57462.herokuapp.com/#!/forsale)
+
 ## Built With
 Mongo, Express, AngularJS, Node, Bootstrap, Font Awesome, and Sweet Alerts
 
