@@ -27,15 +27,7 @@ Steps to get the development environment running.
 - [ ] Add search functionality to search for properties in specific cities
 - [ ] Ability to sort properties by price
 
-## Deployment
-
-
 
 ## Authors
 
 Sarah Harrington
-
-
-## Acknowledgments
-
-* Hat tip to anyone who's code was used
